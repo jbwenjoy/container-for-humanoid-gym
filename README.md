@@ -8,16 +8,19 @@ Tested device (host): Ubuntu 22.04, NVIDIA RTX 4060, nvidia-driver-550, CUDA 12.
 
 1. Download IsaacGym Preview 4 and unzip, replace the files (`Dockerfile`, `build.sh`, `run.sh`) in `/.../isaacgym/docker/`.
 
-2. Run build.sh and run.sh to build and enter the container. Remove `--rm` param in `run.sh` if you want to keep the container. Use `bash run.sh --display` if you wish to run the container with a display.
+2. Run build.sh and run.sh to build and enter the container.
+   Remove `--rm` param in `run.sh` if you want to keep the container.
+   Use `bash run.sh --display` if you wish to run the container with a display.
+   After entering the container, by default you are using the python in `/usr/bin/python` or python3 in `/usr/bin/python3`.
 
-3. Test if you can run IsaacGym examples
+4. Test if you can run IsaacGym examples
 
    ```sh
    cd /opt/isaacgym/python/examples
    python3 1080_balls_of_solitude.py
    ```
 
-4. Install setup.py
+5. Install setup.py
 
    ```sh
    /usr/bin/python -m pip install --upgrade pip
