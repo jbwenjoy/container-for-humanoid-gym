@@ -19,15 +19,23 @@ Tested device (host): Ubuntu 22.04, NVIDIA RTX 4060, nvidia-driver-550, CUDA 12.
 
 4. Install setup.py
 
-   Remember to upgrade pip.
-
    ```sh
    /usr/bin/python -m pip install --upgrade pip
    cd /workspace/humanoid-gym
    pip install -e .
    ```
 
-5. Test running humanoid-gym
+   Some existing packages may conflict, you may keep an eye on the output
+   and use `pip check` to check. For my device, I did the following:
+
+   ```sh
+   sudo pip uninstall thinc confection spacy dask dask-cuda dask-cudf distributed treelite treelite-runtime
+   sudo pip install tornado==6.2
+   ```
+
+   But since these packages haven't been used in humanoid-gym yet, you may skip this.
+
+6. Test running humanoid-gym
 
    ```sh
    cd /workspace/humanoid-gym/
