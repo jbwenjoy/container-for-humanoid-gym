@@ -8,7 +8,7 @@ Tested device (host): Ubuntu 22.04, NVIDIA RTX 4060, nvidia-driver-550, CUDA 12.
 
 1. Download IsaacGym Preview 4 and unzip, replace the files (`Dockerfile`, `build.sh`, `run.sh`) in `/.../isaacgym/docker/`.
 
-2. Run build.sh and run.sh to build and enter the container.
+2. Run build.sh and run.sh to build and enter the container. Remove `--rm` param if you want to keep the container.
 
 3. Test if you can run IsaacGym examples
 
