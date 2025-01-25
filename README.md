@@ -1,5 +1,7 @@
 # container-for-humanoid-gym
-Docker container for humanoid-gym (roboterax/umanoid-gym), tested on NVIDIA RTX 4060
+Docker container for humanoid-gym (roboterax/umanoid-gym)
+
+Tested device (host): Ubuntu 22.04, NVIDIA RTX 4060, nvidia-driver-550, CUDA 12.2
 
 
 ## Instructions
