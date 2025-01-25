@@ -1,5 +1,5 @@
 # container-for-humanoid-gym
-Docker container for humanoid-gym (roboterax/umanoid-gym)
+Docker container for humanoid-gym (roboterax/umanoid-gym), tested on NVIDIA RTX 4060
 
 
 ## Instructions
