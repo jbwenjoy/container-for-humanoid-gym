@@ -4,14 +4,16 @@ Docker container for humanoid-gym (roboterax/umanoid-gym)
 
 ## Instructions
 
-1. Test if you can run IsaacGym examples
+1. Download IsaacGym Preview 4 and unzip, replace the files (`Dockerfile`, `build.sh`, `run.sh`) in `/.../isaacgym/docker/`.
+
+2. Test if you can run IsaacGym examples
 
    ```sh
    cd /opt/isaacgym/python/examples
    python3 1080_balls_of_solitude.py
    ```
 
-2. Install setup.py
+3. Install setup.py
 
    Remember to upgrade pip.
 
