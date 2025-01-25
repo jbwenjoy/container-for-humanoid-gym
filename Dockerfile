@@ -1,4 +1,5 @@
-# Modified from IsaacGym Preview 4's dockerfile (https://developer.nvidia.com/isaac-gym).
+# Modified from IsaacGym Preview 4's dockerfile (https://developer.nvidia.com/isaac-gym),
+# Tested on 4060
 
 FROM nvcr.io/nvidia/pytorch:22.12-py3
 # FROM nvcr.io/nvidia/pytorch:21.09-py3
