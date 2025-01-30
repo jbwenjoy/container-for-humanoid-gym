@@ -13,6 +13,9 @@ Tested device (host): Ubuntu 22.04, NVIDIA RTX 4060, nvidia-driver-550, CUDA 12.
    Use `--display` if you wish to run the container with a display.
    After entering the container, by default you are using the python in `/usr/bin/python` or python3 in `/usr/bin/python3`.
 
+   One thing to notice is that if you use the default user `gymuser`, you may have two python environments. It's important to know which python and pip you are using.
+   If you do not wish to have such problems, you may always use root.
+
 4. Test if you can run IsaacGym examples
 
    ```sh
