@@ -1,5 +1,5 @@
 # container-for-humanoid-gym
-Docker container for humanoid-gym (https://github.com/roboterax/humanoid-gym)
+Docker container for USC-DRCL's isaac (https://github.com/DRCL-USC/isaac/tree/sim2real)
 
 Tested device (host): Ubuntu 22.04, NVIDIA RTX 4060, nvidia-driver-550, CUDA 12.2
 
@@ -14,7 +14,7 @@ Tested device (host): Ubuntu 22.04, NVIDIA RTX 4060, nvidia-driver-550, CUDA 12.
    After entering the container, by default you are using the python in `/usr/bin/python` or python3 in `/usr/bin/python3`.
 
    One thing to notice is that if you use the default user `gymuser`, you may have two python environments. It's important to know which python and pip you are using.
-   If you do not wish to have such problems, you may always use root.
+   If you do not wish to have such problems, you may always use root (running `sudo su` after entering the container).
 
 4. Test if you can run IsaacGym examples
 
@@ -28,23 +28,33 @@ Tested device (host): Ubuntu 22.04, NVIDIA RTX 4060, nvidia-driver-550, CUDA 12.
    ```sh
    /usr/bin/python -m pip install --upgrade pip
    cd /workspace/humanoid-gym
-   pip install -e .
+   pip install -e .  # be careful which python you are using
    ```
 
    Some existing packages may conflict, you may keep an eye on the output
-   and use `pip check` to check. For my device, I did the following:
+   and use `pip check` to check. For my case, I did the following:
 
    ```sh
    sudo pip uninstall thinc confection spacy dask dask-cuda dask-cudf distributed treelite treelite-runtime
    sudo pip install tornado==6.2
    ```
 
-   But since these packages haven't been used in humanoid-gym yet, you may skip this.
-
-6. Test running humanoid-gym
+   Since these packages haven't been used in humanoid-gym yet, you may skip this. But do keep an eye on scipy. For me:
 
    ```sh
-   cd /workspace/humanoid-gym/
+   sudo pip install scipy==1.10.1
+   ```
+
+   (May need) Then install what MPC solver requires:
+
+   ```sh
+   sudo pip install cvxopt
+   ```
+
+6. Test running isaac (README not completed yet)
+
+   ```sh
+   cd /workspace/isaac/
    python humanoid/scripts/sim2sim.py --load_model logs/XBot_ppo/exported/policies/policy_example.pt
    ```
 
